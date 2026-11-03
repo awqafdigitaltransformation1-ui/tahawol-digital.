@@ -1,0 +1,29 @@
+workflows:
+  android-debug-apk:
+    name: Tahawol Digital - Android APK
+    max_build_duration: 60
+    environment:
+      node: 22
+    scripts:
+      - name: Install npm dependencies
+        script: |
+          npm install
+      - name: Create Android project if missing
+        script: |
+          if [ ! -d android ]; then
+            npx cap add android
+          fi
+      - name: Sync Capacitor web assets
+        script: |
+          npx cap sync android
+      - name: Configure Android SDK
+        script: |
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"
+      - name: Build installable debug APK
+        script: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+    artifacts:
+      - android/app/build/outputs/apk/debug/app-debug.apk
+      - android/app/build/outputs/**/*.apk

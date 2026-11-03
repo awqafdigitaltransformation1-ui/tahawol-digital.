@@ -1,0 +1,6 @@
+{
+  "appId": "sy.gov.awqaf.tahawol",
+  "appName": "التحول الرقمي",
+  "webDir": "www",
+  "android": { "allowMixedContent": false }
+}
