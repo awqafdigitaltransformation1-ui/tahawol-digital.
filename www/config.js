@@ -1,6 +1,17 @@
-// انسخ هذا الملف إلى config.js وضع بيانات مشروع Supabase العامة فقط.
-// لا تضع service_role أو كلمة مرور قاعدة البيانات في المتصفح.
+
+/*
+  التحول الرقمي
+  Firebase Configuration
+*/
+
 window.TAHAWOL_CONFIG = {
-  SUPABASE_URL: 'https://YOUR_PROJECT.supabase.co',
-  SUPABASE_ANON_KEY: 'YOUR_ANON_KEY'
+  FIREBASE: {
+    apiKey: "AIzaSyCmIVTDIPz004kXbBS1fAeqF2ly9MsfPOo",
+    authDomain: "tahawol-digital.firebaseapp.com",
+    projectId: "tahawol-digital",
+    storageBucket: "tahawol-digital.firebasestorage.app",
+    messagingSenderId: "490696998870",
+    appId: "1:490696998870:web:57d2814b359c00e815ee77",
+    measurementId: "G-GQ2JLYT8RF"
+  }
 };
